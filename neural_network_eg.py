@@ -1,4 +1,6 @@
 import numpy as np
+from matplotlib import pyplot as plt
+
 
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
@@ -38,4 +40,8 @@ for i in range(1000):
     bias = bias + learning_rate * gradient 
     print("bias -> ",bias,"\n")
 
-    
+x =iteration_list
+y = error_list
+
+plt.title("graph of iteration and error")
+plt.plot(x,y)
